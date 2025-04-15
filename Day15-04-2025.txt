@@ -1,0 +1,441 @@
+Git Init Command
+
+•	It will be used to Create new Repository in the git
+
+•	By Running this Command you will able to create the New Structured Files
+•	in the Current Directory
+
+•	Allows you to keep Start Tracking changes
+
+•	 Open the Command prompt
+
+•	Type the Command Git init // it will create a new Repository
+
+•	Git init bare - it will be creating bare Repository it will not Create any Working Repository it used to create the shared Repository (Between the files)
+
+•	Git init -q // it will removes the unnecessary Outputs
+
+•	Git init -shared // it will used to create the shared Repository between
+Multiple Users
+
+•	After Creating the command you can get git directory to the github account for that follow steps
+
+•	 Login to the Github account
+
+•	Click on the new Repository and create the Repository
+
+•	Public or private as per your Requirements
+
+•	 and then name the Repository
+
+•	 And click the create Repository
+
+•	 You will get the Remote url
+
+•	 and After that connect the git into github for that
+
+•	 git remote add origin  remote url
+
+•	git add filename
+
+•	git commit - m " your message"
+
+•	git push -u origin master (or)
+
+•	git push -u origin main
+
+•	for adding readme files
+
+echo "# repository name ">> README.md file
+
+
+
+
+
+
+Main commands
+
+
+1.	echo "# Database" >> README.md
+2.	git init
+3.	git add README.md
+4.	git commit -m "first commit"
+5.	git branch -M main
+6.	git remote add origin https://github.com/lakshmi0348/Database.git
+7.	git push -u origin main
+
+
+Existing Repository
+
+1.	git remote add origin https://github.com/lakshmi0348/Database.git
+2.	git branch -M main
+3.	git push -u origin main
+
+Git Clone Command
+
+
+	git clone https://github.com/lakshmi0348/Database.git // clone repository and create same repository in some other files
+
+	git clone --depth https://github.com/lakshmi0348/Database.git // clone repository you will need latest history not entire commit history
+	it also called shallow clone
+
+	git clone -b branch name https://github.com/lakshmi0348/Database.git // clone repository it will create the repository in the particular branch
+
+
+
+git add command
+
+
+	it is used to add file into repository
+
+
+	git commit -m " intial commit"
+
+	it will be used to commit changes
+
+git push
+
+	it will be used to push the changes into GitHub
+
+	git branch -M branchname
+
+	it will be used to move to that particular branch name
+
+git pull
+
+	it used to changes the remote repository into your local repository
+
+
+	git pull is combination of
+	git fetch
+	git merge
+
+	git pull calls first git fetch remote repository
+	and after it calls git merge it will merge from local repository
+
+	git pull remote-name branch-name
+
+	 git pull origin main
+
+
+o	remote-name is origin
+o	branch-name is main
+
+
+
+DataTypes:-
+
+Data Types are divided into three types
+
+1.primitive data Types
+
+2.Non - Primitive Data Types
+
+3.user -defined Data Types
+
+
+Primitive Data Types
+
+1.int
+2.float
+3.char
+4.boolean
+5.long
+6.double
+7.byte
+8.short
+
+
+Non - Primitive Data Types
+
+1.Array
+2.Strings
+
+User -defined Data Types
+
+1.class
+2.interface
+
+					Primitive Data types
+
+Primitive Data Types
+
+	1.int - integer it is used to store integer values
+
+	 Ex:-10,20,300,4567 like that
+
+	Syntax:-
+
+	For Declaring Data Types and Variables
+
+	DataType variablename = value ;
+
+	int  a = 12; // static way of declaring a Integer Variable
+
+	int  b = sc.nextInt(); // Dynamic way of declaring a Integer Variable
+
+	nextInt() - it is non static method so we are calling the variable using
+•	creating object
+
+	Syntax:
+
+o	Scanner sc = new Scanner(System.in);
+o	int b= sc.nextInt();
+
+
+
+
+int - 4 bytes
+
+	  32 bits
+
+	  Default value is 0
+
+	  Range:-  -2^31 to 2^31-1
+
+
+
+2.float - float it is used to store floating (or) decimal values
+
+			Ex:-10.12,20.45,30.50,45.67 like that
+
+			Syntax:-
+
+			For Declaring Data Types and Variables
+
+  			DataType variablename = value ;
+
+  			float  a = 12.45f; // static way of declaring a float Variable
+
+  			float b = sc.nextFloatt(); // Dynamic way of declaring a float Variable
+
+ 			nextFloat() - it is non static method so we are calling the variable
+				          using object creation
+Syntax:
+
+	Scanner sc = new Scanner(System.in);
+	float b= sc.nextFloat();
+
+float - 4 bytes
+32 bits
+Default value is 0.0f
+Range:-  -2^31 to 2^31-1
+
+
+
+		3.double - double it is used to store floating (or) decimal values
+
+•	Ex:-10.12,20.45,30.50,45.67 like that
+
+•	Syntax:-
+
+•	For Declaring Data Types and Variables
+
+•	DataType variablename = value ;
+
+•	double  a = 12.45; // static way of declaring a float Variable
+
+•	double b = sc.nextDouble(); // Dynamic way of declaring a Double Variable
+
+•	nextDouble() - it is non static method so we are calling the variable using
+	creating object
+•	Syntax:
+
+	Scanner sc = new Scanner(System.in);
+	float b= sc.nextDouble();
+
+
+
+	double d = 1.2;
+
+	Both float and double are same but double data type will be stored more than after point it will store more than 6 points for storing more than 6 values go for double datatype
+
+o	double - 8 bytes
+
+o	64 bits
+
+o	Default value is 0.0d
+
+o	zRange:-  -2^63 to 2^63-1
+
+
+
+4.Long - long it is used to store integer values
+
+	Ex:-10,20,300,456723456 like that
+
+	Syntax:-
+
+	For Declaring Data Types and Variables
+
+	DataType variablename = value ;
+
+	long  a = 12; // static way of declaring a long Integer Variable
+
+	long  b = sc.nextLong(); // Dynamic way of declaring a  long Integer Variable
+
+	nextLong() - it is non static method so we are calling the variable using
+	creating object
+
+	Syntax:
+
+	Scanner sc = new Scanner(System.in);
+	int b= sc.nextLong();
+
+
+
+	long - 8 bytes
+
+	64 bits
+
+	Default value is 0.0L
+
+	Range:-  -2^63 to 2^63-1
+
+
+	5.short - short it is used to store integer values
+
+	Ex:-10,20 like that
+
+	Syntax:-
+
+	For Declaring Data Types and Variables
+
+	DataType variablename = value ;
+
+	short  a = 12; // static way of declaring a short Variable
+
+	short  b = sc.nextShort(); // Dynamic way of declaring a short Variable
+
+	nextShort() - it is non static method so we are calling the variable using
+	creating object
+
+	Syntax:
+
+	Scanner sc = new Scanner(System.in);
+	int b= sc.nextShot();
+
+
+
+	short - 2 bytes
+
+	16 bits
+
+	Default value is 0
+
+	Range:-  -32,768 to 32,767
+
+
+	6.Byte - Byte it is used to store integer values
+
+	Ex:-10,20,300,4567 like that
+
+	Syntax:-
+
+	For Declaring Data Types and Variables
+
+	DataType variablename = value ;
+
+	byte  a = 12; // static way of declaring a Byte Variable
+
+	byte  b = sc.nextByte(); // Dynamic way of declaring a Byte Variable
+
+	nextByte() - it is non static method so we are calling the variable using
+	creating object
+
+	Syntax:
+
+	Scanner sc = new Scanner(System.in);
+	int b= sc.nextByte();
+
+
+
+	Byte - 1 bytes
+
+	8 bits
+
+	Default value is 0
+
+	Range:-  -128 to 127
+
+7.Boolean - Boolean it is used to store true or false values
+
+	Ex:-True ,false like that
+
+	Syntax:-
+
+	For Declaring Data Types and Variables
+
+	DataType variablename = value ;
+
+	boolean  a = True; // static way of declaring a Boolean Variable
+
+	boolean  b = sc.nextBoolean(); // Dynamic way of declaring a Boolean Variable
+
+	nextBoolean() - it is non static method so we are calling the variable using
+	creating object
+
+	Syntax:
+
+	Scanner sc = new Scanner(System.in);
+	int b= sc.nextBoolean();
+
+
+
+Boolean - 1 bit
+Default value is False
+
+
+
+	8.Char - char it is used to store Single characters
+
+	 Ex:-'a','b','c' like that
+
+	Syntax:-
+
+	 For Declaring Data Types and Variables
+
+	DataType variablename = value ;
+
+	char  a = 'T'; // static way of declaring a Boolean Variable
+
+	char b = sc.next().charAt(0); // Dynamic way of declaring a Boolean Variable
+
+	next().charAt(0) - it is non static method so we are calling the variable using
+	                       	       creating object
+
+
+
+
+Syntax:
+
+o	Scanner sc = new Scanner(System.in);
+o	char b= sc.next().charAt(0);
+
+
+
+char - 2 bytes
+ Default value is ' '
+
+
+
+
+
+
+
+Non - primitive Data Types
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
