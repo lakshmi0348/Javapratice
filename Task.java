@@ -1,16 +1,15 @@
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static java.util.Arrays.stream;
-
-class Employee{
+class Employee
+{
       String name;
       int id;
-    String department;
-    float salary;
-
+      String department;
+      float salary;
+      
     @Override
-    public String toString() {
+    public String toString() 
+    {
         return "Employee{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
@@ -18,49 +17,34 @@ class Employee{
                 ", salary=" + salary +
                 '}';
     }
-
-    public Employee(String name, int id, String department, float salary) {
+    
+    public Employee(String name, int id, String department, float salary)
+    {
         this.name = name;
         this.id = id;
         this.department = department;
         this.salary = salary;
     }
-
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getDepartment() {
+    public String getDepartment()
+    {
         return department;
     }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public float getSalary() {
+    public float getSalary()
+    {
         return salary;
-    }
-
-    public void setSalary(float salary) {
-        this.salary = salary;
     }
 }
 
-public class Task {
-
+public class Task
+{
 
     public static void main(String[] args)
     {
@@ -68,6 +52,7 @@ public class Task {
         list.add(new Employee("lakshmi",1,"it",30000));
         list.add(new Employee("swathi",2,"it",74000));
         list.add(new Employee("James",3,"Testing",320000));
+        list.add(new Employee("James",67,"Testing",320000));
         list.add(new Employee("Syam",4,"it",73000));
         list.add(new Employee("Bhaskar",5,"it",31000));
         list.add(new Employee("saraya",6,"Testing",70000));
@@ -104,7 +89,7 @@ public class Task {
         while(!exit)
         {
             System.out.println("Enter the search Text");
-            String s = sc.next().toUpperCase();
+            String s = sc.next().toLowerCase();
             System.out.println("Enter the Page  Number");
             int pageNo = sc.nextInt();
             if(pageNo<=0)
@@ -112,56 +97,54 @@ public class Task {
                 System.out.println("Note Page Number:User Entered Negative Number or Zero");
                 break;
             }
-            System.out.println("Enter the Sorting Column name");
+            System.out.println("Enter the Sorting Column name like name, id, department ,salary");
             String SortedColumnName = sc.next().toLowerCase();
             System.out.println("Enter the Order ascending /Descending");
-            String Order = sc.next().toLowerCase();
+            String order = sc.next().toLowerCase();
             System.out.println("Enter the page Size");
             int pageSize = sc.nextInt();
-            Comparator<Employee> comparator = switch (SortedColumnName)
+            Comparator<Employee> comparator = switch(SortedColumnName)
             {
-                case "name" -> Comparator.comparing(Employee::getName, String.CASE_INSENSITIVE_ORDER);
-                case "id" -> Comparator.comparingInt(Employee::getId);
-                case "department" -> Comparator.comparing(Employee::getDepartment, String.CASE_INSENSITIVE_ORDER);
+                case "name" -> Comparator.comparing(Employee::getName);
+                case "department" -> Comparator.comparing(Employee::getDepartment);
                 case "salary" -> Comparator.comparingDouble(Employee::getSalary);
-                default -> null;
+                default -> Comparator.comparingInt(Employee::getId);
             };
+            Comparator<Employee> conditionComparator = order.equals("descending")?
+                    comparator.reversed():
+                    comparator;
 
             if(pageSize<=0)
             {
                 System.out.println("Note page Size:User Entered Negative Number or Zero");
                 break;
             }
-            else {
+            else
+            {
                 List<Employee> matchedList = list.stream()
                         .filter(emp ->
                                 emp.getDepartment().toLowerCase().contains(s)||
                                         emp.getName().toLowerCase().contains(s) ||
                                         String.valueOf(emp.getId()).contains(s) ||
-                                        String.valueOf((int) emp.getSalary()).contains(s))
+                                        String.valueOf((int) emp.getSalary()).contains(s)).sorted(conditionComparator)
                         .collect(Collectors.toList());
 
                 int startingIndex = (pageNo - 1) * pageSize;
-                int Endindex = Math.min(startingIndex + pageSize, matchedList.size());
-
-                if (startingIndex >= matchedList.size()) {
+                int EndIndex = Math.min(startingIndex + pageSize, matchedList.size());
+                if (startingIndex >= matchedList.size())
+                {
                     System.out.println("No more records for the given page number.");
-                } else {
-                    List<Employee> pagedList = matchedList.subList(startingIndex, Endindex);
-                    if(Order.equalsIgnoreCase("ascending")) {
-                        pagedList.sort(comparator);
+                } else
+                {
+                    List<Employee> pagedList = matchedList.subList(startingIndex, EndIndex);
+
+                        pagedList.forEach(System.out::println);
                     }
-                    else {
-                        pagedList.sort(comparator.reversed());
-                    }
-                    pagedList.forEach(System.out::println);
                 }
                 System.out.println("\nDo you want to continue? (yes/no)");
-                String exitcheck = sc.next().toLowerCase();
-                exit = exitcheck.equals("no");
+                String exitCheck = sc.next().toLowerCase();
+                exit = exitCheck.equals("no");
             }
-
-        }
-
     }
-}
+    }
+
