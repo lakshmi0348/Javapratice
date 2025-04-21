@@ -9,8 +9,8 @@ public class varexample {
 
         var a = sc.next();
         System.out.println(a);
-var b =sc.nextFloat();
-System.out.println(b);
+        var b =sc.nextFloat();
+        System.out.println(b);
 
 
     }
