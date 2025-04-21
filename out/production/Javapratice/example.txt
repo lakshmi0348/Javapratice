@@ -1,2 +1,0 @@
-The switch statement in Java is a control flow statement that allows you to execute one block of code among
- many based on the value of an expression
