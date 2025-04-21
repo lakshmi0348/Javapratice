@@ -1,3 +1,5 @@
+package pratice;
+
 public class laptop {
 
 public String Name;
@@ -30,7 +32,7 @@ public int price;
 
     @Override
     public String toString() {
-        return "laptop{" +
+        return "pratice.laptop{" +
                 "Name='" + Name + '\'' +
                 ", ram=" + ram +
                 ", price=" + price +

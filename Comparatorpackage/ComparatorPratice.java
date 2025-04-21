@@ -1,4 +1,4 @@
-package Collections;
+package Comparatorpackage;
 
 import java.util.*;
 
@@ -34,7 +34,7 @@ class laptop implements  Comparable<laptop>{
 
     @Override
     public String toString() {
-        return "laptop{" +
+        return "pratice.laptop{" +
                 "Name='" + Name + '\'' +
                 ", ram=" + ram +
                 ", price=" + price +

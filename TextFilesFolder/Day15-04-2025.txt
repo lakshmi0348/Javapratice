@@ -447,7 +447,7 @@ Interfaces:
 	Abstract types used to specify a behavior that classes must implement
 	Example:
 
-interface Employee {
+interface TaskFolder.Employee {
     void salary();
 }
 Enums:
@@ -526,8 +526,8 @@ Global Variables:
 	Non static Variables
 
 
-Loops:-
-Loops is a set of Instructions execute repeatedly until  condition gets falsed
+Loops.Loops:-
+Loops.Loops is a set of Instructions execute repeatedly until  condition gets falsed
 
 	For loop
 
@@ -592,7 +592,7 @@ else
     System.out.println(" b is greater than");
 }
 
-Switch :-
+Loops.Switch :-
 
 
 	The switch statement in Java is a control flow statement that allows you to execute one block of code among many based on the value of an expression
@@ -671,8 +671,8 @@ o	Logical Not
 	Break
 		break;
 
-	Continue
-                  Continue;
+	Loops.Continue
+                  Loops.Continue;
 
 
 
@@ -746,7 +746,7 @@ for (int i = 1; i <= 5; i++)
 	System.out.print(i);// Output: 1 2
 }
 ________________________________________
- Continue Statement
+ Loops.Continue Statement
 
 
 Skips the current iteration and moves to the next.

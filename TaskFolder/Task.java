@@ -1,3 +1,5 @@
+package TaskFolder;
+
 import java.util.*;
 import java.util.stream.Collectors;
 class Employee
@@ -10,7 +12,7 @@ class Employee
     @Override
     public String toString() 
     {
-        return "Employee{" +
+        return "TaskFolder.Employee{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
                 ", department='" + department + '\'' +
