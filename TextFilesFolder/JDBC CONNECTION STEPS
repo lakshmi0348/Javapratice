@@ -1,0 +1,22 @@
+Step  1:- Download and Install My sql server workbench
+Step  2:- Setup the application and set the password for sql workbench
+Step  3:- Create database and Create table in that database
+Step 4:- it is maven project to go to pom.xml and Dependencies
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.33</version>
+</dependency>
+Step 5:- Go to Maven tab and reload all the dependencies
+and click on sync
+Step 6:-connect Application to database
+Steps follows :
+database url :-
+username:-
+password:-
+Step 7:-
+connect the application connection code
+Step 8:-
+Connected Successfully
+
+
