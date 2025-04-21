@@ -1,4 +1,4 @@
-package Collections.File;
+package File;
 
 import java.util.Scanner;
 
